@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EchoMatch - Find Similar Songs</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">EchoMatch</p>
+          <h1>Find songs that feel like the one you love.</h1>
+          <p class="subtitle">
+            Paste a song you already know, tune the vibe sliders, and get a curated
+            list of similar tracks instantly.
+          </p>
+        </div>
+        <div class="hero-card">
+          <div class="input-group">
+            <label for="songInput">Song name or artist</label>
+            <input id="songInput" type="text" placeholder="e.g. Blinding Lights - The Weeknd" />
+          </div>
+          <div class="input-group">
+            <label for="moodSelect">Primary mood</label>
+            <select id="moodSelect">
+              <option value="energetic">Energetic</option>
+              <option value="chill">Chill</option>
+              <option value="moody">Moody</option>
+              <option value="uplifting">Uplifting</option>
+              <option value="romantic">Romantic</option>
+            </select>
+          </div>
+          <div class="sliders">
+            <div>
+              <label for="danceability">Danceability</label>
+              <input id="danceability" type="range" min="1" max="10" value="7" />
+            </div>
+            <div>
+              <label for="energy">Energy</label>
+              <input id="energy" type="range" min="1" max="10" value="8" />
+            </div>
+            <div>
+              <label for="acoustic">Acoustic</label>
+              <input id="acoustic" type="range" min="1" max="10" value="3" />
+            </div>
+          </div>
+          <button id="findButton" class="primary">Find similar songs</button>
+        </div>
+      </header>
+
+      <main>
+        <section class="results">
+          <div class="results-header">
+            <div>
+              <h2>Similar songs</h2>
+              <p id="resultsSummary">Start by searching to get tailored recommendations.</p>
+            </div>
+            <div class="pill" id="vibePill">Vibe: Energetic</div>
+          </div>
+          <div id="resultsGrid" class="results-grid"></div>
+        </section>
+
+        <section class="tips">
+          <h3>How EchoMatch works</h3>
+          <ul>
+            <li>It compares the mood, energy, and acoustic vibe you choose.</li>
+            <li>It blends your input with curated playlists to surface matches.</li>
+            <li>Use it as a starting point, then save your favorites elsewhere.</li>
+          </ul>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
