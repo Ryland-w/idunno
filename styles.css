@@ -1,0 +1,191 @@
+:root {
+  color-scheme: light;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  background: #f6f7fb;
+  color: #111827;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 24px 64px;
+}
+
+.hero {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: center;
+}
+
+.eyebrow {
+  letter-spacing: 0.3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #6366f1;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(32px, 4vw, 44px);
+  margin: 10px 0 16px;
+  color: #0f172a;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.hero-card {
+  background: white;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 24px 50px rgba(15, 23, 42, 0.12);
+  display: grid;
+  gap: 18px;
+}
+
+.input-group {
+  display: grid;
+  gap: 8px;
+}
+
+label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #334155;
+}
+
+input,
+select {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  font-size: 14px;
+  width: 100%;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #818cf8;
+  border-color: transparent;
+}
+
+.sliders {
+  display: grid;
+  gap: 16px;
+}
+
+.sliders input[type="range"] {
+  width: 100%;
+}
+
+.primary {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.primary:hover {
+  filter: brightness(1.05);
+}
+
+main {
+  margin-top: 48px;
+  display: grid;
+  gap: 40px;
+}
+
+.results {
+  background: white;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+.results-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.results-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.song-card {
+  background: #f8fafc;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  display: grid;
+  gap: 8px;
+}
+
+.song-card h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.song-card p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.pill {
+  background: #eef2ff;
+  color: #4338ca;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.tips {
+  background: #111827;
+  color: #f9fafb;
+  border-radius: 20px;
+  padding: 24px 28px;
+}
+
+.tips h3 {
+  margin-top: 0;
+}
+
+.tips ul {
+  margin: 0;
+  padding-left: 18px;
+  color: #e2e8f0;
+  line-height: 1.6;
+}
+
+@media (max-width: 720px) {
+  .hero-card {
+    padding: 20px;
+  }
+
+  .results {
+    padding: 20px;
+  }
+}
